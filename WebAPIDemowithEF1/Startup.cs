@@ -34,6 +34,10 @@ namespace WebAPIDemowithEF1
             services.AddDbContext<LearningDBContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
 
+            //Added Configuration to access as a services - To access values from appsettings.json file
+            //Reference: https://www.c-sharpcorner.com/article/setting-and-reading-values-from-app-settings-json-in-net-core/
+            //services.AddSingleton<IConfiguration>(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

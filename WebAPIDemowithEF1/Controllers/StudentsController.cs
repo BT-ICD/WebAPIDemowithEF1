@@ -32,6 +32,14 @@ namespace WebAPIDemowithEF1.Controllers
         [HttpGet]
         public IActionResult GetStudents()
         {
+            _logger.LogTrace("This is Trace");
+            _logger.LogDebug("This is debug");
+            _logger.LogInformation("This is information");
+            _logger.LogWarning("This is warning");
+            _logger.LogError("This is error");
+            _logger.LogCritical("This is critical");
+
+            //throw new Exception("Custom Exception for testing ");
             _logger.LogInformation(1, "Hello this is GetStudens method");
             //var result = _context.Students.ToList();
             //return Ok(result);
